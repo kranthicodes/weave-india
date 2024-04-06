@@ -8,8 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-poppins)'],
+      },
       colors: {
-        'eco': {
+        eco: {
           50: '#DEF7F1',
           100: '#BDEFE3',
           200: '#80E0CA',
