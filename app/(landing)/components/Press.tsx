@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Press() {
   return (
     <div className="w-full py-[52px] px-[146px] bg-[#EBF0EF] flex justify-center items-center">
-      <div className="items-center gap-[104px] justify-center flex w-full">
+      <div className="items-center gap-12 lg:gap-[104px] justify-center flex lg:flex-row flex-col w-full">
         <div className="flex-col justify-center items-center gap-[30px] flex min-w-[300px]">
           <Image
             width={70}

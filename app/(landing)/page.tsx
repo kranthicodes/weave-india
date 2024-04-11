@@ -9,7 +9,7 @@ import Collaborate from './components/Collaborate';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen min-w-[100vw] flex-col">
       <Hero />
       <Press />
       <Process />

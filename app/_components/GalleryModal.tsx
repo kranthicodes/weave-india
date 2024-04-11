@@ -10,7 +10,7 @@ export const GalleryModal = ({
   setIsOpen,
   setName,
   galleryTitle,
-  itemsLength
+  itemsLength,
 }: {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
@@ -26,14 +26,14 @@ export const GalleryModal = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setIsOpen(false)}
-          className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
+          className="bg-slate-900/20 backdrop-blur px-5 lg:p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
         >
           <motion.div
             initial={{ scale: 0, rotate: '0deg' }}
             animate={{ scale: 1, rotate: '0deg' }}
             exit={{ scale: 0, rotate: '0deg' }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-white text-black p-[46px] flex flex-col gap-4 rounded-lg max-w-[1360px] w-full h-[660px] shadow-xl cursor-default relative overflow-hidden"
+            className="bg-white text-black p-5 lg:p-[46px] flex flex-col gap-6 lg:gap-4 rounded-lg max-w-[1360px] w-full lg:h-[660px] shadow-xl cursor-default relative overflow-hidden"
           >
             <div className="flex w-full justify-end">
               <div
@@ -41,18 +41,18 @@ export const GalleryModal = ({
                 className="flex items-center gap-[2px] cursor-pointer"
               >
                 <RiArrowLeftSLine className="w-[28px] h-[28px]" />
-                <h3 className="underline font-medium leading-[120%] text-lg">
+                <h3 className="underline font-medium leading-[120%] text-base lg:text-lg">
                   Go Back
                 </h3>
               </div>
             </div>
             <div className="flex flex-col w-full items-center gap-12">
-              <h1 className="text-eco-600 text-4xl font-medium leading-[120%]">
+              <h1 className="text-eco-600 lg:text-4xl text-lg: font-medium leading-[120%]">
                 {galleryTitle}
               </h1>
 
-              <div className="w-full relative max-w-[982px] px-[88px] h-[400px]">
-                <div className="absolute flex justify-between z-[9999999] w-full h-full left-0 items-center">
+              <div className="w-full relative max-w-[982px] lg:px-[88px] h-[400px]">
+                <div className="absolute flex justify-between z-[9999999] w-full h-full left-0 items-end lg:items-center">
                   <Image
                     width={48}
                     height={48}
@@ -63,7 +63,7 @@ export const GalleryModal = ({
                   <Image
                     width={48}
                     height={48}
-                    className="rotate-180 cursor-pointer swiper-button-next !w-12 !h-12"
+                    className="rotate-180 cursor-pointer swiper-button-next1"
                     src={'/assets/explore-gallery/slide-left.svg'}
                     alt="left nav"
                   />
@@ -81,7 +81,7 @@ export const GalleryModal = ({
                     slideShadows: true,
                   }}
                   navigation={{
-                    nextEl: '.swiper-button-next',
+                    nextEl: '.swiper-button-next1',
                     prevEl: '.swiper-button-previous',
                   }}
                   modules={[EffectCoverflow, Navigation]}
@@ -90,7 +90,7 @@ export const GalleryModal = ({
                     .fill(0)
                     .map((_, idx) => (
                       <SwiperSlide
-                        className="!w-[600px] !h-[400px]"
+                        className="lg:!w-[600px] !w-full px-2 lg:px-0 lg:!h-[400px] h-full"
                         key={idx + 1}
                       >
                         <Image
@@ -100,6 +100,7 @@ export const GalleryModal = ({
                             idx + 1
                           }.png`}
                           alt="1"
+                          className="lg:w-[600px] w-full lg:h-[400px] h-full"
                         />
                       </SwiperSlide>
                     ))}

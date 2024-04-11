@@ -5,5 +5,9 @@ export default function Container({
 }: {
   children: React.JSX.Element | React.JSX.Element[];
 }) {
-  return <div className="max-w-[1320px] w-full mx-auto my-0">{children}</div>;
+  return (
+    <div className="max-w-full xl:max-w-[1180px] 2xl:max-w-[1320px] w-full mx-auto my-0">
+      {children}
+    </div>
+  );
 }

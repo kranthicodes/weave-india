@@ -11,7 +11,7 @@ export default function Failed({
     <div className="flex pt-[146px] flex-row justify-center items-center">
       <div className="flex flex-col justify-center gap-9">
         <div className="flex flex-col text-center justify-center gap-2">
-          <h1 className="text-2xl font-bold">Payment Failed!!!</h1>
+          <h1 className="text-lg: font-bold">Payment Failed!!!</h1>
           <p className="text-eco-600 text-base">
             YUh-oh, Seems like there was an issue while
             <br /> processing your payment.

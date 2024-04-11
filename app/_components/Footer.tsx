@@ -4,15 +4,15 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <div className="w-full py-20 bg-[#EBF0EF] flex justify-center items-center">
+    <div className="w-full py-12 px-5 lg:px-0 lg:py-20 bg-[#EBF0EF] flex justify-center items-center">
       <Container>
         <div className="flex flex-col w-full gap-[74px]">
-          <div className="flex justify-between">
-            <h2 className="text-[32px] leading-[112%] text-eco-600">
+          <div className="flex lg:flex-row flex-col gap-9 lg:gap-0 justify-between">
+            <h2 className="text-[24px] lg:text-[26px] 2xl:text-[32px] leading-[112%] text-eco-600">
               We&apos;re on a Mission to
               <br /> create a “Green Fab Revolution”
             </h2>
-            <div className="flex gap-10">
+            <div className="flex lg:flex-row flex-col gap-10">
               <FooterItem>
                 <p className="leading-[125%] text-xs">
                   WEAVEINDIA is providing sustainable fashion at its finest with
@@ -37,18 +37,16 @@ export default function Footer() {
                 </p>
               </FooterItem>
               <FooterItem>
-                <p className="leading-[100%] font-medium text-xs">
-                  Terms of Use
-                </p>
-                <p className="leading-[100%] font-medium text-xs">
-                  Privacy Policy
+                <p className="leading-[130%] font-medium text-xs">
+                  10-4-146/4/1, Ramsri Elite Apartment, Altafnagar, Bairamalguda
+                  Rd, Saroornagar, Bairamalguda, Hyderabad, Telangana 500079
                 </p>
               </FooterItem>
             </div>
           </div>
           <div>
-            <h1 className="text-black text-[96px] font-bold leading-[100%]">
-              WEAVEINDIA
+            <h1 className="text-black text-[24px] lg:text-[54px] 2xl:text-[96px] font-bold leading-[100%]">
+              WEAVEINDIA Trust
             </h1>
           </div>
         </div>
@@ -59,7 +57,7 @@ export default function Footer() {
 
 function FooterItem({ children }: { children: JSX.Element | JSX.Element[] }) {
   return (
-    <div className="w-[187px] flex flex-col border-t-[2px] gap-6 border-t-eco-600 pt-6 text-eco-600">
+    <div className="w-full lg:w-[187px] flex flex-col border-t-[2px] gap-6 border-t-eco-600 pt-6 text-eco-600">
       {children}
     </div>
   );

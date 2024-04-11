@@ -4,10 +4,10 @@ import React from 'react';
 
 export default function ComingSoon() {
   return (
-    <div className="w-full py-10 bg-white flex justify-center items-center">
+    <div className="w-full py-[100px] lg:py-10 bg-white flex justify-center items-center">
       <Container>
-        <div className="flex justify-between">
-          <div className="flex gap-10 w-1/2">
+        <div className="flex lg:flex-row flex-col lg:justify-between items-center lg:items-center px-5 lg:px-0 gap-12 lg:gap-0">
+          <div className="flex gap-10 lg:w-1/2">
             <div className="flex flex-col gap-12">
               <Image
                 src="/assets/coming-soon/1.png"
@@ -37,14 +37,14 @@ export default function ComingSoon() {
               />
             </div>
           </div>
-          <div className="flex w-1/2 justify-center">
-            <div className="flex flex-col justify-center gap-8">
-              <h1 className="text-[64px] font-medium text-black text-left leading-[100%]">
+          <div className="flex lg:w-1/2 lg:justify-center w-full">
+            <div className="flex flex-col justify-center lg:gap-8 gap-6">
+              <h1 className="text-[40px] lg:text-[64px] font-medium text-black text-left leading-[100%]">
                 Coming
-                <br />
+                <br className="hidden lg:block" />
                 Soon!
               </h1>
-              <p className="text-2xl leading-[150%]">
+              <p className="text-lg lg:text-2xl leading-[150%]">
                 Weaving Stories through Threads
                 <br />
                 Crafted with Love, Woven with
